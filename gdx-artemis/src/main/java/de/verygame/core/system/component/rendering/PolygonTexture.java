@@ -1,13 +1,14 @@
-package de.verygame.square.game.artemis.system.component.rendering;
+package de.verygame.core.system.component.rendering;
 
 import com.badlogic.gdx.graphics.g2d.PolygonRegion;
 import com.badlogic.gdx.graphics.g2d.PolygonSpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
-
-import de.verygame.square.game.artemis.system.component.RectTransform;
+import de.verygame.core.system.component.RectTransform;
 import de.verygame.square.util.ArrayUtils;
 import de.verygame.square.util.PolygonUtils;
+import de.verygame.util.ArrayUtils;
+import de.verygame.util.PolygonUtils;
 
 /**
  * Created by Marco on 19.04.2017.

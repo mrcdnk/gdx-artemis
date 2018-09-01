@@ -1,15 +1,11 @@
-package de.verygame.square.game.artemis.system.component.collision.callback;
+package de.verygame.core.system.component.collision.callback;
 
 import com.artemis.World;
 import com.badlogic.gdx.Gdx;
-
-import de.verygame.square.core.event.Event;
-import de.verygame.square.core.event.EventHandler;
-import de.verygame.square.game.GameScreens;
-import de.verygame.square.game.artemis.system.component.Movement;
-import de.verygame.square.game.artemis.system.component.RectTransform;
-import de.verygame.square.game.artemis.system.component.TypeContainer;
-import de.verygame.square.util.collision.CollisionUtils;
+import de.verygame.core.system.component.Movement;
+import de.verygame.core.system.component.RectTransform;
+import de.verygame.core.system.component.TypeContainer;
+import de.verygame.util.CollisionUtils;
 
 /**
  * @author Marco Deneke

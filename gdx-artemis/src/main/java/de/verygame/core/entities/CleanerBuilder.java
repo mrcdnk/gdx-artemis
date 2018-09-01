@@ -1,26 +1,24 @@
-package de.verygame.square.game.artemis.entities;
+package de.verygame.core.entities;
 
 import com.artemis.World;
 import com.badlogic.gdx.Gdx;
+import de.verygame.core.Direction;
+import de.verygame.core.EntityBuilder;
 
+import de.verygame.core.EntityType;
+import de.verygame.core.system.component.Movement;
+import de.verygame.core.system.component.RectTransform;
+import de.verygame.core.system.component.TypeContainer;
+import de.verygame.core.system.component.behaviour.BehaviourData;
+import de.verygame.core.system.component.behaviour.FadeSpawn;
+import de.verygame.core.system.component.collision.BoxCollider;
+import de.verygame.core.system.component.collision.CollisionData;
+import de.verygame.core.system.component.collision.callback.CleanerCallback;
+import de.verygame.core.system.component.rendering.BasicTexture;
+import de.verygame.core.system.component.rendering.RenderData;
+import de.verygame.util.PolygonUtils;
 import org.jbox2d.collision.AABB;
 import org.jbox2d.common.Vec2;
-
-import de.verygame.square.game.artemis.EntityBuilder;
-import de.verygame.square.game.EntityType;
-import de.verygame.square.game.artemis.system.component.Movement;
-import de.verygame.square.game.artemis.system.component.RectTransform;
-import de.verygame.square.game.artemis.system.component.TypeContainer;
-import de.verygame.square.game.artemis.system.component.behaviour.BehaviourData;
-import de.verygame.square.game.artemis.system.component.behaviour.FadeSpawn;
-import de.verygame.square.game.artemis.system.component.collision.BoxCollider;
-import de.verygame.square.game.artemis.system.component.collision.CollisionData;
-import de.verygame.square.game.artemis.system.component.collision.callback.CleanerCallback;
-import de.verygame.square.game.artemis.system.component.rendering.BasicTexture;
-import de.verygame.square.game.artemis.system.component.rendering.RenderData;
-import de.verygame.square.resource.CommonResourceUnit;
-import de.verygame.square.util.Direction;
-import de.verygame.square.util.PolygonUtils;
 
 /**
  * @author Marco Deneke

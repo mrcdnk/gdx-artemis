@@ -1,20 +1,19 @@
-package de.verygame.square.game.artemis.entities;
+package de.verygame.core.entities;
 
 import com.artemis.World;
+import de.verygame.core.EntityBuilder;
+import de.verygame.core.EntityType;
+import de.verygame.core.powerup.PowerUpType;
+import de.verygame.core.system.component.RectTransform;
+import de.verygame.core.system.component.TypeContainer;
+import de.verygame.core.system.component.behaviour.BehaviourData;
+import de.verygame.core.system.component.behaviour.SelfDestructBehaviour;
+import de.verygame.core.system.component.collision.CircleCollider;
+import de.verygame.core.system.component.collision.CollideUtils;
+import de.verygame.core.system.component.collision.CollisionData;
+import de.verygame.core.system.component.rendering.RenderData;
 
 import org.jbox2d.collision.AABB;
-
-import de.verygame.square.game.artemis.EntityBuilder;
-import de.verygame.square.game.EntityType;
-import de.verygame.square.game.spawnsequence.powerup.PowerUpType;
-import de.verygame.square.game.artemis.system.component.RectTransform;
-import de.verygame.square.game.artemis.system.component.TypeContainer;
-import de.verygame.square.game.artemis.system.component.behaviour.BehaviourData;
-import de.verygame.square.game.artemis.system.component.behaviour.SelfDestructBehaviour;
-import de.verygame.square.game.artemis.system.component.collision.CircleCollider;
-import de.verygame.square.game.artemis.system.component.collision.CollideUtils;
-import de.verygame.square.game.artemis.system.component.collision.CollisionData;
-import de.verygame.square.game.artemis.system.component.rendering.RenderData;
 
 /**
  * @author Marco Deneke

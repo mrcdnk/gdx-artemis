@@ -9,6 +9,9 @@ allprojects {
 
     ext {
         gdxVersion = '1.9.4'
+        jbox2dVersion = '2.2.1.1'
+        ashleyVersion = '1.6.0'
+        collisionUtils = '0.1.0'
     }
 
     dependencies {
@@ -18,6 +21,15 @@ allprojects {
         testCompile 'org.powermock:powermock-module-junit4-rule-agent:1.6.4'
         testCompile 'org.powermock:powermock-module-junit4-rule:1.6.4'
         testCompile 'org.powermock:powermock-module-junit4:1.6.4'
+        compile "com.badlogicgames.gdx:gdx:$gdxVersion"
+        compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+        compile "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+        compile "com.badlogicgames.gdx:gdx-tools:$gdxVersion"
+        compile "org.jbox2d:jbox2d-library:$jbox2dVersion"
+        // Support for artemis-odb
+        compile "net.onedaybeard.artemis:artemis-odb:1.2.1"
+
+        compile 'com.github.mrcdnk:2d-collision-utils:0.1.0'
     }
 }
 
@@ -30,6 +42,7 @@ project(':gdx-artemis') {
     }
 
     dependencies {
+
         compile 'org.reflections:reflections:0.9.10'
     }
 }

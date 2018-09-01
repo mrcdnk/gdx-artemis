@@ -1,4 +1,4 @@
-package de.verygame.square.game.artemis.system.component.rendering;
+package de.verygame.core.system.component.rendering;
 
 import com.artemis.Component;
 import com.badlogic.gdx.utils.Array;

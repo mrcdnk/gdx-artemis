@@ -1,13 +1,25 @@
-package de.verygame.square.game.artemis.entities;
+package de.verygame.core.entities;
 
 import com.artemis.World;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
-
-import de.verygame.square.game.artemis.EntityBuilder;
+import de.verygame.core.EntityBuilder;
+import de.verygame.core.EntityType;
+import de.verygame.core.system.component.Movement;
+import de.verygame.core.system.component.RectTransform;
+import de.verygame.core.system.component.TypeContainer;
+import de.verygame.core.system.component.behaviour.BehaviourData;
+import de.verygame.core.system.component.behaviour.FadeSpawn;
+import de.verygame.core.system.component.behaviour.SelfDestructBehaviour;
+import de.verygame.core.system.component.collision.CollideUtils;
+import de.verygame.core.system.component.collision.CollisionData;
+import de.verygame.core.system.component.collision.PolygonCollider;
+import de.verygame.core.system.component.collision.callback.ObstacleCallback;
+import de.verygame.core.system.component.rendering.PolygonTexture;
+import de.verygame.core.system.component.rendering.RGBADrawable;
+import de.verygame.core.system.component.rendering.RenderData;
+import de.verygame.core.system.component.wrapping.WrappingData;
 import de.verygame.square.game.EntityType;
-import de.verygame.square.game.resource.GameResourceUnit;
-import de.verygame.square.game.spawnsequence.obstacle.ObstacleDescriptor;
 import de.verygame.square.game.artemis.system.component.Movement;
 import de.verygame.square.game.artemis.system.component.RectTransform;
 import de.verygame.square.game.artemis.system.component.TypeContainer;
@@ -23,6 +35,8 @@ import de.verygame.square.game.artemis.system.component.rendering.PolygonTexture
 import de.verygame.square.game.artemis.system.component.rendering.RGBADrawable;
 import de.verygame.square.game.artemis.system.component.rendering.RenderData;
 import de.verygame.square.game.artemis.system.component.wrapping.WrappingData;
+import de.verygame.square.game.resource.GameResourceUnit;
+import de.verygame.square.game.spawnsequence.obstacle.ObstacleDescriptor;
 import de.verygame.square.resource.CommonResourceUnit;
 
 /**

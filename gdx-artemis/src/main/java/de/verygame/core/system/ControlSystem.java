@@ -1,15 +1,14 @@
-package de.verygame.square.game.artemis.system;
+package de.verygame.core.system;
 
 import com.artemis.Aspect;
 import com.artemis.BaseEntitySystem;
 import com.artemis.ComponentMapper;
 import com.artemis.utils.IntBag;
-
-import de.verygame.square.game.artemis.system.component.Movement;
-import de.verygame.square.game.artemis.system.component.RectTransform;
-import de.verygame.square.game.artemis.system.component.PlayerData;
-import de.verygame.square.game.artemis.system.control.DirectionListener;
-import de.verygame.square.util.Direction;
+import de.verygame.core.Direction;
+import de.verygame.core.system.component.Movement;
+import de.verygame.core.system.component.PlayerData;
+import de.verygame.core.system.component.RectTransform;
+import de.verygame.core.system.control.DirectionListener;
 
 /**
  * @author Marco Deneke

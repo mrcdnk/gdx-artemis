@@ -1,11 +1,9 @@
-package de.verygame.square.game.artemis;
+package de.verygame.core;
 
 import com.artemis.Component;
 import com.artemis.World;
 
 import java.util.HashMap;
-
-import de.verygame.square.core.resource.ResourceHandler;
 
 /**
  * @author Marco Deneke

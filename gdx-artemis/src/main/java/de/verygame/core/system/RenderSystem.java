@@ -1,4 +1,4 @@
-package de.verygame.square.game.artemis.system;
+package de.verygame.core.system;
 
 import com.artemis.Aspect;
 import com.artemis.BaseEntitySystem;
@@ -7,10 +7,10 @@ import com.badlogic.gdx.graphics.g2d.PolygonSpriteBatch;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.FloatArray;
 import com.badlogic.gdx.utils.IntArray;
+import de.verygame.core.system.component.rendering.RGBADrawable;
+import de.verygame.core.system.component.rendering.RenderData;
+import de.verygame.core.system.component.wrapping.WrappingData;
 
-import de.verygame.square.game.artemis.system.component.rendering.RGBADrawable;
-import de.verygame.square.game.artemis.system.component.rendering.RenderData;
-import de.verygame.square.game.artemis.system.component.wrapping.WrappingData;
 
 /**
  * @author Marco Deneke

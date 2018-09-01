@@ -1,11 +1,9 @@
-package de.verygame.square.game.artemis.entities;
+package de.verygame.core.entities;
 
 import com.artemis.World;
-
-import de.verygame.square.game.resource.GameResourceUnit;
-import de.verygame.square.game.artemis.system.component.RectTransform;
-import de.verygame.square.game.artemis.system.component.rendering.BasicTexture;
-import de.verygame.square.game.artemis.system.component.rendering.RenderData;
+import de.verygame.core.system.component.RectTransform;
+import de.verygame.core.system.component.rendering.BasicTexture;
+import de.verygame.core.system.component.rendering.RenderData;
 
 /**
  * Created by Marco on 23.11.2017.

@@ -1,13 +1,9 @@
-package de.verygame.square.game.artemis.system.component.collision.callback;
+package de.verygame.core.system.component.collision.callback;
 
 import com.artemis.World;
-
-import de.verygame.square.core.event.EventHandler;
-import de.verygame.square.game.EntityType;
-import de.verygame.square.game.artemis.system.component.behaviour.BehaviourData;
-import de.verygame.square.game.artemis.system.component.TypeContainer;
-import de.verygame.square.game.artemis.system.component.behaviour.SelfDestructBehaviour;
-import de.verygame.square.game.artemis.system.component.collision.CollisionData;
+import de.verygame.core.system.component.behaviour.BehaviourData;
+import de.verygame.core.system.component.behaviour.SelfDestructBehaviour;
+import de.verygame.core.system.component.collision.CollisionData;
 
 /**
  * Created by Marco on 19.01.2017.

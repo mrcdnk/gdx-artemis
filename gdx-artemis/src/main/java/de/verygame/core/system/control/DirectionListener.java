@@ -1,4 +1,4 @@
-package de.verygame.square.game.artemis.system.control;
+package de.verygame.core.system.control;
 
 /**
  * @author Marco Deneke

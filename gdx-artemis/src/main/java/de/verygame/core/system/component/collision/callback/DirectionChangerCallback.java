@@ -1,11 +1,10 @@
-package de.verygame.square.game.artemis.system.component.collision.callback;
+package de.verygame.core.system.component.collision.callback;
 
 import com.artemis.World;
 import com.badlogic.gdx.math.MathUtils;
+import de.verygame.core.system.ControlSystem;
+import de.verygame.core.system.component.CenteredDrawableRotationBehaviour;
 
-import de.verygame.square.core.event.EventHandler;
-import de.verygame.square.game.artemis.system.ControlSystem;
-import de.verygame.square.game.artemis.system.component.CenteredDrawableRotationBehaviour;
 
 /**
  * @author Marco Deneke

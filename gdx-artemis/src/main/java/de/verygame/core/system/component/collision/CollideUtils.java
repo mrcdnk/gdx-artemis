@@ -1,12 +1,10 @@
-package de.verygame.square.game.artemis.system.component.collision;
+package de.verygame.core.system.component.collision;
 
 import com.badlogic.gdx.math.Vector2;
-
+import de.verygame.core.system.component.RectTransform;
+import de.verygame.util.CollisionUtils;
 import org.jbox2d.collision.AABB;
 import org.jbox2d.common.Vec2;
-
-import de.verygame.square.util.collision.CollisionUtils;
-import de.verygame.square.game.artemis.system.component.RectTransform;
 
 /**
  * @author Rico Schrage

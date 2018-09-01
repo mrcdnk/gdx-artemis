@@ -1,8 +1,7 @@
-package de.verygame.square.game.artemis.system.component.rendering;
+package de.verygame.core.system.component.rendering;
 
 import com.badlogic.gdx.graphics.g2d.PolygonSpriteBatch;
-
-import de.verygame.square.game.artemis.system.component.RectTransform;
+import de.verygame.core.system.component.RectTransform;
 
 /**
  * @author Marco Deneke

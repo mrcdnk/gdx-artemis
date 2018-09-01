@@ -1,11 +1,10 @@
-package de.verygame.square.game.artemis.system.component.wrapping;
+package de.verygame.core.system.component.wrapping;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.utils.FloatArray;
+import de.verygame.core.system.component.RectTransform;
 
 import java.util.Arrays;
-
-import de.verygame.square.game.artemis.system.component.RectTransform;
 
 /**
  * @author Rico Schrage

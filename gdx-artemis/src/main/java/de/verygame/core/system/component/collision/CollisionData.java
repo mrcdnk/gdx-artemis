@@ -1,13 +1,11 @@
-package de.verygame.square.game.artemis.system.component.collision;
+package de.verygame.core.system.component.collision;
 
 import com.artemis.Component;
 import com.artemis.World;
 import com.artemis.annotations.PooledWeaver;
-
-import org.jbox2d.collision.AABB;
-
+import de.verygame.core.system.component.collision.callback.CollisionCallback;
 import de.verygame.square.core.event.EventHandler;
-import de.verygame.square.game.artemis.system.component.collision.callback.CollisionCallback;
+import org.jbox2d.collision.AABB;
 
 /**
  * @author Marco Deneke

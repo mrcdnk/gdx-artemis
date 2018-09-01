@@ -1,13 +1,12 @@
-package de.verygame.square.game.artemis.entities;
+package de.verygame.core.entities;
 
 import com.artemis.World;
+import de.verygame.core.system.component.RectTransform;
+import de.verygame.core.system.component.collision.CollisionData;
+import de.verygame.core.system.component.collision.callback.SpeedUpCallback;
+import de.verygame.core.system.component.rendering.BasicTexture;
+import de.verygame.core.system.component.rendering.RenderData;
 
-import de.verygame.square.game.resource.GameResourceUnit;
-import de.verygame.square.game.artemis.system.component.RectTransform;
-import de.verygame.square.game.artemis.system.component.collision.CollisionData;
-import de.verygame.square.game.artemis.system.component.collision.callback.SpeedUpCallback;
-import de.verygame.square.game.artemis.system.component.rendering.BasicTexture;
-import de.verygame.square.game.artemis.system.component.rendering.RenderData;
 
 /**
  * @author Marco Deneke

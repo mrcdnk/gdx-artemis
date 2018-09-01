@@ -1,10 +1,9 @@
-package de.verygame.square.game.artemis.system.component.wrapping;
+package de.verygame.core.system.component.wrapping;
 
 import com.artemis.Component;
 import com.artemis.annotations.PooledWeaver;
 import com.badlogic.gdx.utils.FloatArray;
-
-import de.verygame.square.util.ArrayUtils;
+import de.verygame.util.ArrayUtils;
 
 /**
  * @author Rico Schrage

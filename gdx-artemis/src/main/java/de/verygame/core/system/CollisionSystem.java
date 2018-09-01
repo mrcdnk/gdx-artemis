@@ -1,4 +1,4 @@
-package de.verygame.square.game.artemis.system;
+package de.verygame.core.system;
 
 import com.artemis.Aspect;
 import com.artemis.ComponentMapper;
@@ -8,23 +8,16 @@ import com.artemis.systems.IteratingSystem;
 import com.badlogic.gdx.utils.FloatArray;
 import com.badlogic.gdx.utils.IntArray;
 import com.badlogic.gdx.utils.IntIntMap;
-
+import de.verygame.core.system.component.RectTransform;
+import de.verygame.core.system.component.collision.*;
+import de.verygame.core.system.component.collision.callback.CollisionCallback;
+import de.verygame.core.system.component.wrapping.WrappingData;
 import org.jbox2d.callbacks.TreeCallback;
 import org.jbox2d.collision.AABB;
 import org.jbox2d.collision.broadphase.DynamicTree;
 import org.jbox2d.common.Vec2;
 
 import java.util.HashMap;
-
-import de.verygame.square.core.event.EventHandler;
-import de.verygame.square.game.artemis.system.component.RectTransform;
-import de.verygame.square.game.artemis.system.component.collision.CircleCollider;
-import de.verygame.square.game.artemis.system.component.collision.CollideUtils;
-import de.verygame.square.game.artemis.system.component.collision.CollisionData;
-import de.verygame.square.game.artemis.system.component.collision.PolygonCollider;
-import de.verygame.square.game.artemis.system.component.collision.callback.CollisionCallback;
-import de.verygame.square.game.artemis.system.component.collision.BoxCollider;
-import de.verygame.square.game.artemis.system.component.wrapping.WrappingData;
 
 /**
  * @author Marco Deneke

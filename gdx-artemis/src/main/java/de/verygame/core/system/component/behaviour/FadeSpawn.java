@@ -1,4 +1,4 @@
-package de.verygame.square.game.artemis.system.component.behaviour;
+package de.verygame.core.system.component.behaviour;
 
 import com.artemis.ComponentMapper;
 import com.artemis.World;
@@ -7,17 +7,14 @@ import com.badlogic.gdx.graphics.g2d.PolygonRegion;
 import com.badlogic.gdx.math.ConvexHull;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.FloatArray;
-
-import de.verygame.square.core.resource.ResourceHandler;
-import de.verygame.square.game.artemis.system.component.Movement;
-import de.verygame.square.game.artemis.system.component.RectTransform;
-import de.verygame.square.game.artemis.system.component.collision.CollisionData;
-import de.verygame.square.game.artemis.system.component.rendering.PolygonTexture;
-import de.verygame.square.game.artemis.system.component.rendering.RenderData;
-import de.verygame.square.game.artemis.system.component.rendering.RGBADrawable;
-import de.verygame.square.resource.CommonResourceUnit;
-import de.verygame.square.util.ArrayUtils;
-import de.verygame.square.util.PolygonUtils;
+import de.verygame.core.system.component.Movement;
+import de.verygame.core.system.component.RectTransform;
+import de.verygame.core.system.component.collision.CollisionData;
+import de.verygame.core.system.component.rendering.PolygonTexture;
+import de.verygame.core.system.component.rendering.RGBADrawable;
+import de.verygame.core.system.component.rendering.RenderData;
+import de.verygame.util.ArrayUtils;
+import de.verygame.util.PolygonUtils;
 
 /**
  * @author Marco Deneke

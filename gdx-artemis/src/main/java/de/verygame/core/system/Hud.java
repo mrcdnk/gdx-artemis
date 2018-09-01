@@ -1,4 +1,4 @@
-package de.verygame.square.game.artemis.system;
+package de.verygame.core.system;
 
 import de.verygame.square.game.artemis.system.component.behaviour.Behaviour;
 

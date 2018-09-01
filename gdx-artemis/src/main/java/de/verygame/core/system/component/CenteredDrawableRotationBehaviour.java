@@ -1,12 +1,12 @@
-package de.verygame.square.game.artemis.system.component;
+package de.verygame.core.system.component;
 
 import com.artemis.World;
+import de.verygame.core.system.component.behaviour.Behaviour;
+import de.verygame.core.system.component.rendering.Drawable;
+import de.verygame.core.system.component.rendering.RenderData;
 
-import de.verygame.square.game.artemis.system.component.behaviour.Behaviour;
-import de.verygame.square.game.artemis.system.component.rendering.Drawable;
-import de.verygame.square.game.artemis.system.component.rendering.RenderData;
+import static de.verygame.core.system.component.behaviour.Behaviour.BehaviourState.PROCESS;
 
-import static de.verygame.square.game.artemis.system.component.behaviour.Behaviour.BehaviourState.PROCESS;
 
 /**
  * @author Marco Deneke

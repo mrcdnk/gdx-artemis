@@ -1,4 +1,4 @@
-package de.verygame.square.game.artemis.system.component;
+package de.verygame.core.system.component;
 
 import com.artemis.Component;
 import com.artemis.annotations.PooledWeaver;

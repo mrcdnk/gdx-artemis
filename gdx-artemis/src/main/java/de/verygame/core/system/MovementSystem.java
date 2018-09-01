@@ -1,14 +1,12 @@
-package de.verygame.square.game.artemis.system;
+package de.verygame.core.system;
 
 import com.artemis.Aspect;
 import com.artemis.ComponentMapper;
 import com.artemis.annotations.Wire;
 import com.artemis.systems.IteratingSystem;
-
-import de.verygame.square.game.artemis.system.component.Movement;
-import de.verygame.square.game.artemis.system.component.RectTransform;
-import de.verygame.square.game.artemis.system.component.collision.CollisionData;
-import de.verygame.square.game.system.component.collision.*;
+import de.verygame.core.system.component.Movement;
+import de.verygame.core.system.component.RectTransform;
+import de.verygame.core.system.component.collision.CollisionData;
 
 /**
  * @author Marco Deneke

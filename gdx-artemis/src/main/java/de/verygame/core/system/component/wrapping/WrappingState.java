@@ -1,9 +1,8 @@
-package de.verygame.square.game.artemis.system.component.wrapping;
+package de.verygame.core.system.component.wrapping;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.utils.FloatArray;
-
-import de.verygame.square.game.artemis.system.component.RectTransform;
+import de.verygame.core.system.component.RectTransform;
 
 /**
  * Created by Rico on 04.06.2015.

@@ -1,4 +1,4 @@
-package de.verygame.square.game.artemis.system.component.behaviour;
+package de.verygame.core.system.component.behaviour;
 
 /**
  * @author Marco Deneke

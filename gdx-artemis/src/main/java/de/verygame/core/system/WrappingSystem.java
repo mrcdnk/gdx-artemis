@@ -1,13 +1,12 @@
-package de.verygame.square.game.artemis.system;
+package de.verygame.core.system;
 
 import com.artemis.Aspect;
 import com.artemis.ComponentMapper;
 import com.artemis.systems.IteratingSystem;
-
-import de.verygame.square.game.artemis.system.component.RectTransform;
-import de.verygame.square.game.artemis.system.component.wrapping.WrappingData;
-import de.verygame.square.game.artemis.system.component.wrapping.WrappingState;
-import de.verygame.square.game.artemis.system.component.wrapping.WrappingUtils;
+import de.verygame.core.system.component.RectTransform;
+import de.verygame.core.system.component.wrapping.WrappingData;
+import de.verygame.core.system.component.wrapping.WrappingState;
+import de.verygame.core.system.component.wrapping.WrappingUtils;
 
 /**
  * @author Rico Schrage
