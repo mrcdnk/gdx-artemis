@@ -1,2 +1,2 @@
 # gdx-artemis
-An easy to use Entity-Component-System Engine using the libgdx rendering stack.
+An example for usage of libgdx, artemis-odb, gdx-surface and 2d-collision-utils.

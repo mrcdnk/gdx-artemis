@@ -2,6 +2,7 @@ package de.verygame.core;
 
 import com.artemis.Component;
 import com.artemis.World;
+import de.verygame.surface.resource.ResourceHandler;
 
 import java.util.HashMap;
 

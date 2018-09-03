@@ -2,9 +2,11 @@ package de.verygame.core.system.component.collision.callback;
 
 import com.artemis.World;
 import com.badlogic.gdx.Gdx;
+import de.verygame.core.event.Events;
 import de.verygame.core.system.component.Movement;
 import de.verygame.core.system.component.RectTransform;
 import de.verygame.core.system.component.TypeContainer;
+import de.verygame.surface.event.EventHandler;
 import de.verygame.util.CollisionUtils;
 
 /**
@@ -22,8 +24,8 @@ public class ObstacleCallback extends CollisionCallback {
 
             switch (typeContainer.getEntityType()) {
                 case SQUARE:
-                    eventHandler.emitEvent(Event.SWITCH_SCREEN, GameScreens.GAME_OVER);
-                    eventHandler.emitEvent(Event.GAME_PAUSE, true);
+                    eventHandler.emitEvent(Events.SWITCH_SCREEN, Events.GAME_OVER);
+                    eventHandler.emitEvent(Events.GAME_PAUSE, true);
                     break;
                 case OBSTACLE:
                     loadMappers(world);

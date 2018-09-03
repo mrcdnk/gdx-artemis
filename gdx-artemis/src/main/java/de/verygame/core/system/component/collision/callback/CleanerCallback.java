@@ -3,6 +3,7 @@ package de.verygame.core.system.component.collision.callback;
 import com.artemis.World;
 import de.verygame.core.EntityType;
 import de.verygame.core.system.component.TypeContainer;
+import de.verygame.surface.event.EventHandler;
 
 /**
  * @author Marco Deneke

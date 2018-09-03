@@ -8,10 +8,7 @@ import com.badlogic.gdx.utils.Array;
 import de.verygame.core.system.component.behaviour.Behaviour;
 import de.verygame.core.system.component.behaviour.BehaviourData;
 import de.verygame.core.system.component.behaviour.BehaviourListener;
-import de.verygame.square.core.resource.ResourceHandler;
-import de.verygame.square.game.artemis.system.component.behaviour.Behaviour;
-import de.verygame.square.game.artemis.system.component.behaviour.BehaviourData;
-import de.verygame.square.game.artemis.system.component.behaviour.BehaviourListener;
+import de.verygame.surface.resource.ResourceHandler;
 
 import java.lang.reflect.Field;
 import java.util.EnumMap;

@@ -4,6 +4,7 @@ import com.artemis.World;
 import com.badlogic.gdx.math.MathUtils;
 import de.verygame.core.system.ControlSystem;
 import de.verygame.core.system.component.CenteredDrawableRotationBehaviour;
+import de.verygame.surface.event.EventHandler;
 
 
 /**

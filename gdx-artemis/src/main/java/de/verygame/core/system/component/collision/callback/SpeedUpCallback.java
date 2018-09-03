@@ -3,6 +3,7 @@ package de.verygame.core.system.component.collision.callback;
 import com.artemis.ComponentMapper;
 import com.artemis.World;
 import de.verygame.core.system.component.Movement;
+import de.verygame.surface.event.EventHandler;
 
 
 /**

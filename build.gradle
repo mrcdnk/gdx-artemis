@@ -30,6 +30,7 @@ allprojects {
         compile "net.onedaybeard.artemis:artemis-odb:1.2.1"
 
         compile 'com.github.mrcdnk:2d-collision-utils:0.1.0'
+        compile 'de.verygame.surface:gdx-surface:0.5a'
     }
 }
 

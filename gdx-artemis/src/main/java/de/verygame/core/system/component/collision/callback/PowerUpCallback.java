@@ -1,9 +1,12 @@
 package de.verygame.core.system.component.collision.callback;
 
 import com.artemis.World;
+import de.verygame.core.EntityType;
+import de.verygame.core.system.component.TypeContainer;
 import de.verygame.core.system.component.behaviour.BehaviourData;
 import de.verygame.core.system.component.behaviour.SelfDestructBehaviour;
 import de.verygame.core.system.component.collision.CollisionData;
+import de.verygame.surface.event.EventHandler;
 
 /**
  * Created by Marco on 19.01.2017.

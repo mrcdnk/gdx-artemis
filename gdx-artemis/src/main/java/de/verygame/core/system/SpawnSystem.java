@@ -8,12 +8,6 @@ import de.verygame.core.entities.CleanerBuilder;
 import de.verygame.core.entities.PowerUpBuilder;
 import de.verygame.core.powerup.PowerUpType;
 import de.verygame.core.system.component.PlayerData;
-import de.verygame.square.game.Level;
-import de.verygame.square.game.artemis.entities.CleanerBuilder;
-import de.verygame.square.game.artemis.entities.PowerUpBuilder;
-import de.verygame.square.game.artemis.system.component.PlayerData;
-import de.verygame.square.game.spawnsequence.SpawnSequence;
-import de.verygame.square.game.spawnsequence.powerup.PowerUpType;
 
 /**
  * @author Marco Deneke

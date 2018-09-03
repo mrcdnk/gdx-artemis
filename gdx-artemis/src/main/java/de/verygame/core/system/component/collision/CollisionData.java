@@ -4,7 +4,7 @@ import com.artemis.Component;
 import com.artemis.World;
 import com.artemis.annotations.PooledWeaver;
 import de.verygame.core.system.component.collision.callback.CollisionCallback;
-import de.verygame.square.core.event.EventHandler;
+import de.verygame.surface.event.EventHandler;
 import org.jbox2d.collision.AABB;
 
 /**

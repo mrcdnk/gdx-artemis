@@ -12,6 +12,7 @@ import de.verygame.core.system.component.RectTransform;
 import de.verygame.core.system.component.collision.*;
 import de.verygame.core.system.component.collision.callback.CollisionCallback;
 import de.verygame.core.system.component.wrapping.WrappingData;
+import de.verygame.surface.event.EventHandler;
 import org.jbox2d.callbacks.TreeCallback;
 import org.jbox2d.collision.AABB;
 import org.jbox2d.collision.broadphase.DynamicTree;

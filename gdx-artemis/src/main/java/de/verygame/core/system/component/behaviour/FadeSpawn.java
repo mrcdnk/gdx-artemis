@@ -13,6 +13,7 @@ import de.verygame.core.system.component.collision.CollisionData;
 import de.verygame.core.system.component.rendering.PolygonTexture;
 import de.verygame.core.system.component.rendering.RGBADrawable;
 import de.verygame.core.system.component.rendering.RenderData;
+import de.verygame.surface.resource.ResourceHandler;
 import de.verygame.util.ArrayUtils;
 import de.verygame.util.PolygonUtils;
 

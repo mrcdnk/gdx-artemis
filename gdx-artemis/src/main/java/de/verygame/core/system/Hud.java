@@ -1,6 +1,7 @@
 package de.verygame.core.system;
 
-import de.verygame.square.game.artemis.system.component.behaviour.Behaviour;
+
+import de.verygame.core.system.component.behaviour.Behaviour;
 
 /**
  * @author Rico Schrage
