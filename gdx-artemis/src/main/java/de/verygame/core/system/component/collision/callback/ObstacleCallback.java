@@ -6,8 +6,8 @@ import de.verygame.core.event.Events;
 import de.verygame.core.system.component.Movement;
 import de.verygame.core.system.component.RectTransform;
 import de.verygame.core.system.component.TypeContainer;
+import de.verygame.core.utils.CollisionUtils;
 import de.verygame.surface.event.EventHandler;
-import de.verygame.util.CollisionUtils;
 
 /**
  * @author Marco Deneke
@@ -37,8 +37,7 @@ public class ObstacleCallback extends CollisionCallback {
 
                         Movement m2 = movementMapper.get(eid);
 
-                        boolean facesTowards = CollisionUtils.facesTowards(r2.getX(), r2.getY(), r2.getX() + r2.getWidth(true), r2.getY() + r2.getHeight(true), m2.getXVelocity(), m2.getYVelocity(),
-                                r1.getX(), r1.getY(), r1.getX() + r1.getWidth(true), r1.getY() + r1.getHeight(true));
+                        boolean facesTowards = CollisionUtils.facesTowards(r2, m2, r1);
 
                         System.out.println(facesTowards);
 

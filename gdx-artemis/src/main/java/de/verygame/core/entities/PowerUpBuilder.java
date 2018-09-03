@@ -9,7 +9,7 @@ import de.verygame.core.system.component.TypeContainer;
 import de.verygame.core.system.component.behaviour.BehaviourData;
 import de.verygame.core.system.component.behaviour.SelfDestructBehaviour;
 import de.verygame.core.system.component.collision.CircleCollider;
-import de.verygame.core.system.component.collision.CollideUtils;
+import de.verygame.core.utils.CollisionAdapter;
 import de.verygame.core.system.component.collision.CollisionData;
 import de.verygame.core.system.component.rendering.RenderData;
 
@@ -46,7 +46,7 @@ public abstract class PowerUpBuilder extends EntityBuilder {
         cc.setRadius(rt.getWidth() / 2);
 
         CollisionData cd = getComponent(CollisionData.class);
-        cd.setAABB(new AABB(CollideUtils.buildLocalAABB(rt.getWidth() * rt.getWidthScale(), rt.getHeight() * rt.getHeightScale())));
+        cd.setAABB(new AABB(CollisionAdapter.buildLocalAABB(rt.getWidth() * rt.getWidthScale(), rt.getHeight() * rt.getHeightScale())));
 
         getComponent(BehaviourData.class).addBehaviour(new SelfDestructBehaviour(POWER_UP_TTL));
 

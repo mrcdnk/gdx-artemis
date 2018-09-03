@@ -12,6 +12,7 @@ import de.verygame.core.system.component.RectTransform;
 import de.verygame.core.system.component.collision.*;
 import de.verygame.core.system.component.collision.callback.CollisionCallback;
 import de.verygame.core.system.component.wrapping.WrappingData;
+import de.verygame.core.utils.CollisionAdapter;
 import de.verygame.surface.event.EventHandler;
 import org.jbox2d.callbacks.TreeCallback;
 import org.jbox2d.collision.AABB;
@@ -222,7 +223,7 @@ public class CollisionSystem extends IteratingSystem {
 
         checkCircleCollider = new CircleCollider();
         checkCircleCollider.setRadius(radius);
-        AABB aabb = CollideUtils.buildLocalAABB(checkRectTransform.getWidth() * checkRectTransform.getWidthScale(), checkRectTransform.getHeight() * checkRectTransform.getHeightScale());
+        AABB aabb = CollisionAdapter.buildLocalAABB(checkRectTransform.getWidth() * checkRectTransform.getWidthScale(), checkRectTransform.getHeight() * checkRectTransform.getHeightScale());
 
         aabb.lowerBound.addLocal(x, y);
         aabb.upperBound.addLocal(x, y);
@@ -307,13 +308,13 @@ public class CollisionSystem extends IteratingSystem {
         PolygonCollider pc = polygonColliderMapper.get(otherEntity);
 
         if (bc != null) {
-            return CollideUtils.checkRectangleCircleCollision(rt, bc, rectTransform, circleCollider);
+            return CollisionAdapter.checkRectangleCircleCollision(rt, bc, rectTransform, circleCollider);
         }
         else if (cc != null) {
-            return CollideUtils.checkCircleCircleCollision(rt, cc, rectTransform, circleCollider);
+            return CollisionAdapter.checkCircleCircleCollision(rt, cc, rectTransform, circleCollider);
         }
         else {
-            return pc != null && CollideUtils.checkCirclePolygonCollision(rectTransform, circleCollider, rt, pc);
+            return pc != null && CollisionAdapter.checkCirclePolygonCollision(rectTransform, circleCollider, rt, pc);
         }
 
     }
@@ -376,35 +377,35 @@ public class CollisionSystem extends IteratingSystem {
 
         if (b1 != null) {
             if (b2 != null) {
-                return CollideUtils.checkRectangleRectangleCollision(rt1, b1, rt2, b2, xCurrentOffset, yCurrentOffset, xOtherOffset, yOtherOffset);
+                return CollisionAdapter.checkRectangleRectangleCollision(rt1, b1, rt2, b2, xCurrentOffset, yCurrentOffset, xOtherOffset, yOtherOffset);
             }
             else if (c2 != null) {
-                return CollideUtils.checkRectangleCircleCollision(rt1, b1, rt2, c2, 0, yCurrentOffset, xOtherOffset, yOtherOffset);
+                return CollisionAdapter.checkRectangleCircleCollision(rt1, b1, rt2, c2, 0, yCurrentOffset, xOtherOffset, yOtherOffset);
             }
             else {
-                return CollideUtils.checkRectanglePolygonCollision(rt1, b1, rt2, p2, 0, yCurrentOffset, xOtherOffset, yOtherOffset);
+                return CollisionAdapter.checkRectanglePolygonCollision(rt1, b1, rt2, p2, 0, yCurrentOffset, xOtherOffset, yOtherOffset);
             }
         }
         else if (c1 != null) {
             if (b2 != null) {
-                return CollideUtils.checkRectangleCircleCollision(rt2, b2, rt1, c1, xOtherOffset, yOtherOffset, xCurrentOffset, yCurrentOffset);
+                return CollisionAdapter.checkRectangleCircleCollision(rt2, b2, rt1, c1, xOtherOffset, yOtherOffset, xCurrentOffset, yCurrentOffset);
             }
             else if (c2 != null) {
-                return CollideUtils.checkCircleCircleCollision(rt1, c1, rt2, c2, xCurrentOffset, yCurrentOffset, xOtherOffset, yOtherOffset);
+                return CollisionAdapter.checkCircleCircleCollision(rt1, c1, rt2, c2, xCurrentOffset, yCurrentOffset, xOtherOffset, yOtherOffset);
             }
             else {
-                return CollideUtils.checkCirclePolygonCollision(rt1, c1, rt2, p2, xCurrentOffset, yCurrentOffset, xOtherOffset, yOtherOffset);
+                return CollisionAdapter.checkCirclePolygonCollision(rt1, c1, rt2, p2, xCurrentOffset, yCurrentOffset, xOtherOffset, yOtherOffset);
             }
         }
         else {
             if (b2 != null) {
-                return CollideUtils.checkRectanglePolygonCollision(rt2, b2, rt1, p1, xOtherOffset, yOtherOffset, xCurrentOffset, yCurrentOffset);
+                return CollisionAdapter.checkRectanglePolygonCollision(rt2, b2, rt1, p1, xOtherOffset, yOtherOffset, xCurrentOffset, yCurrentOffset);
             }
             else if (c2 != null) {
-                return CollideUtils.checkCirclePolygonCollision(rt2, c2, rt1, p1, xOtherOffset, yOtherOffset, xCurrentOffset, yCurrentOffset);
+                return CollisionAdapter.checkCirclePolygonCollision(rt2, c2, rt1, p1, xOtherOffset, yOtherOffset, xCurrentOffset, yCurrentOffset);
             }
             else {
-                return CollideUtils.checkPolygonPolygonCollision(rt1, p1, rt2, p2, xCurrentOffset, yCurrentOffset, xOtherOffset, yOtherOffset);
+                return CollisionAdapter.checkPolygonPolygonCollision(rt1, p1, rt2, p2, xCurrentOffset, yCurrentOffset, xOtherOffset, yOtherOffset);
             }
         }
     }

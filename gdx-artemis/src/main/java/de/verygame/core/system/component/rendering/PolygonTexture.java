@@ -5,10 +5,8 @@ import com.badlogic.gdx.graphics.g2d.PolygonSpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
 import de.verygame.core.system.component.RectTransform;
-import de.verygame.square.util.ArrayUtils;
-import de.verygame.square.util.PolygonUtils;
+import de.verygame.core.utils.PolygonUtils;
 import de.verygame.util.ArrayUtils;
-import de.verygame.util.PolygonUtils;
 
 /**
  * Created by Marco on 19.04.2017.
@@ -21,16 +19,16 @@ public class PolygonTexture extends RGBADrawable {
 
     public PolygonTexture(TextureRegion textureRegion, RectTransform transform, Vector2[] polygon, short[] triangles) {
         super(transform);
-        this.polygonRegion = new PolygonRegion(textureRegion, ArrayUtils.buildVertexArray(polygon), triangles);
+        this.polygonRegion = new PolygonRegion(textureRegion, PolygonUtils.buildVertexArray(polygon), triangles);
     }
 
     public PolygonTexture(TextureRegion textureRegion, RectTransform transform, Vector2[] polygon) {
-        this(textureRegion, transform, ArrayUtils.buildVertexArray(polygon));
+        this(textureRegion, transform, PolygonUtils.buildVertexArray(polygon));
     }
 
     public PolygonTexture(TextureRegion textureRegion, RectTransform transform, float[] polygon){
         super(transform);
-        this.polygonRegion = new PolygonRegion(textureRegion, polygon, PolygonUtils.getDefaultTriangles(polygon));
+        this.polygonRegion = new PolygonRegion(textureRegion, polygon, PolygonUtils.getDefaultTriangles(polygon.length/2));
     }
 
     @Override

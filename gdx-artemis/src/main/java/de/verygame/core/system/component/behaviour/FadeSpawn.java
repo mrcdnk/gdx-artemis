@@ -7,15 +7,16 @@ import com.badlogic.gdx.graphics.g2d.PolygonRegion;
 import com.badlogic.gdx.math.ConvexHull;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.FloatArray;
+import de.verygame.core.resource.CommonResourceUnit;
 import de.verygame.core.system.component.Movement;
 import de.verygame.core.system.component.RectTransform;
 import de.verygame.core.system.component.collision.CollisionData;
 import de.verygame.core.system.component.rendering.PolygonTexture;
 import de.verygame.core.system.component.rendering.RGBADrawable;
 import de.verygame.core.system.component.rendering.RenderData;
+import de.verygame.core.utils.ArrayUtils;
+import de.verygame.core.utils.PolygonUtils;
 import de.verygame.surface.resource.ResourceHandler;
-import de.verygame.util.ArrayUtils;
-import de.verygame.util.PolygonUtils;
 
 /**
  * @author Marco Deneke
@@ -70,9 +71,10 @@ public class FadeSpawn extends TimedBehaviour {
         drawable = data.getDrawable();
         drawable.setAlpha(ALPHA_BASE_VALUE);
 
-        convexHull = convexHullProcessor.computePolygon(ArrayUtils.buildVertexArray(polygon), false);
+        convexHull = convexHullProcessor.computePolygon(PolygonUtils.buildVertexArray(polygon), false);
 
         ArrayUtils.removeDuplicates(convexHull);
+
 
         borderPoly = PolygonUtils.createBorderPolygon(convexHull, BORDER_WIDTH, rectTransform.getWidth() * rectTransform.getWidthScale(), rectTransform.getHeight() * rectTransform.getHeightScale());
 

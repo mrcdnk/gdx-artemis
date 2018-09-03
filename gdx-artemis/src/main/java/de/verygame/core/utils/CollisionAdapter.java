@@ -1,7 +1,10 @@
-package de.verygame.core.system.component.collision;
+package de.verygame.core.utils;
 
 import com.badlogic.gdx.math.Vector2;
 import de.verygame.core.system.component.RectTransform;
+import de.verygame.core.system.component.collision.BoxCollider;
+import de.verygame.core.system.component.collision.CircleCollider;
+import de.verygame.core.system.component.collision.PolygonCollider;
 import de.verygame.util.CollisionUtils;
 import org.jbox2d.collision.AABB;
 import org.jbox2d.common.Vec2;
@@ -9,11 +12,11 @@ import org.jbox2d.common.Vec2;
 /**
  * @author Rico Schrage
  */
-public class CollideUtils {
+public class CollisionAdapter {
 
     public static final Vec2 ZERO_VECTOR = new Vec2(0, 0);
 
-    private CollideUtils() {
+    private CollisionAdapter() {
         //utility class
     }
 
@@ -45,8 +48,9 @@ public class CollideUtils {
      */
     public static boolean checkRectanglePolygonCollision(RectTransform rt1, BoxCollider b, RectTransform rt2, PolygonCollider p,
                                                          float xOffsetOne, float yOffsetOne, float xOffsetTwo, float yOffsetTwo) {
+
         return CollisionUtils.checkRectanglePolygonCollision(rt1.getX() + xOffsetOne, rt1.getY() + yOffsetOne, b.getWidth() * rt1.getWidthScale(), b.getHeight() * rt1.getHeightScale(),
-                rt2.getX() + xOffsetTwo, rt2.getY() + yOffsetTwo, rt2.getWidthScale(), rt2.getHeightScale(), p.getVertices());
+                rt2.getX() + xOffsetTwo, rt2.getY() + yOffsetTwo, PolygonUtils.unwrapPolygon(p.getVertices(), rt2.getWidthScale(), rt2.getHeightScale()));
     }
 
     /**
@@ -78,7 +82,7 @@ public class CollideUtils {
     public static boolean checkCirclePolygonCollision(RectTransform rt1, CircleCollider c, RectTransform rt2, PolygonCollider p,
                                                       float xOffsetOne, float yOffsetOne, float xOffsetTwo, float yOffsetTwo) {
         return CollisionUtils.checkCirclePolygonCollision(rt1.getX() + xOffsetOne, rt1.getY() + yOffsetOne, c.getRadius() * rt1.getWidthScale(),
-                rt2.getX() + xOffsetTwo, rt2.getY() + yOffsetTwo, rt2.getWidthScale(), rt2.getHeightScale(), p.getVertices());
+                rt2.getX() + xOffsetTwo, rt2.getY() + yOffsetTwo, PolygonUtils.unwrapPolygon(p.getVertices(), rt2.getWidthScale(), rt2.getHeightScale()));
     }
 
     /**
@@ -109,8 +113,8 @@ public class CollideUtils {
      */
     public static boolean checkPolygonPolygonCollision(final RectTransform t1, final PolygonCollider p1, final RectTransform t2, final PolygonCollider p2,
                                                        float xOffsetOne, float yOffsetOne, float xOffsetTwo, float yOffsetTwo) {
-        return CollisionUtils.checkPolygonPolygonCollision(t1.getX() + xOffsetOne, t1.getY() + yOffsetOne, t1.getWidthScale(), t1.getHeightScale(), p1.getVertices(),
-                t2.getX() + xOffsetTwo, t2.getY() + yOffsetTwo, t2.getWidthScale(), t2.getHeightScale(), p2.getVertices());
+        return CollisionUtils.checkPolygonPolygonCollision(t1.getX() + xOffsetOne, t1.getY() + yOffsetOne, PolygonUtils.unwrapPolygon(p1.getVertices(), t1.getWidthScale(), t1.getHeightScale()),
+                t2.getX() + xOffsetTwo, t2.getY() + yOffsetTwo, PolygonUtils.unwrapPolygon(p2.getVertices(), t2.getWidthScale(), t2.getHeightScale()));
     }
 
     public static boolean checkCircleCircleCollision(final RectTransform t1, final CircleCollider c1, final RectTransform t2, final CircleCollider c2) {

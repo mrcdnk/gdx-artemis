@@ -6,6 +6,7 @@ import de.verygame.core.Direction;
 import de.verygame.core.EntityBuilder;
 
 import de.verygame.core.EntityType;
+import de.verygame.core.resource.CommonResourceUnit;
 import de.verygame.core.system.component.Movement;
 import de.verygame.core.system.component.RectTransform;
 import de.verygame.core.system.component.TypeContainer;
@@ -16,7 +17,7 @@ import de.verygame.core.system.component.collision.CollisionData;
 import de.verygame.core.system.component.collision.callback.CleanerCallback;
 import de.verygame.core.system.component.rendering.BasicTexture;
 import de.verygame.core.system.component.rendering.RenderData;
-import de.verygame.util.PolygonUtils;
+import de.verygame.core.utils.PolygonUtils;
 import org.jbox2d.collision.AABB;
 import org.jbox2d.common.Vec2;
 

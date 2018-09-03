@@ -5,16 +5,19 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
 import de.verygame.core.EntityBuilder;
 import de.verygame.core.EntityType;
+import de.verygame.core.resource.CommonResourceUnit;
+import de.verygame.core.resource.GameResourceUnit;
 import de.verygame.core.system.component.Movement;
 import de.verygame.core.system.component.RectTransform;
 import de.verygame.core.system.component.TypeContainer;
 import de.verygame.core.system.component.behaviour.BehaviourData;
 import de.verygame.core.system.component.behaviour.FadeSpawn;
 import de.verygame.core.system.component.behaviour.SelfDestructBehaviour;
-import de.verygame.core.system.component.collision.CollideUtils;
+import de.verygame.core.utils.CollisionAdapter;
 import de.verygame.core.system.component.collision.CollisionData;
 import de.verygame.core.system.component.collision.PolygonCollider;
 import de.verygame.core.system.component.collision.callback.ObstacleCallback;
+import de.verygame.core.system.component.rendering.BasicTexture;
 import de.verygame.core.system.component.rendering.PolygonTexture;
 import de.verygame.core.system.component.rendering.RGBADrawable;
 import de.verygame.core.system.component.rendering.RenderData;
@@ -154,7 +157,7 @@ public class ObstacleBuilder extends EntityBuilder {
         renderData.setDrawable(drawable);
         renderData.setLayerIndex(0);
 
-        Vector2[] scaled = CollideUtils.scaleToSize(vertices, rectTransform.getWidth(), rectTransform.getHeight());
+        Vector2[] scaled = CollisionAdapter.scaleToSize(vertices, rectTransform.getWidth(), rectTransform.getHeight());
 
         PolygonCollider polygonCollider = getComponent(PolygonCollider.class);
 
@@ -162,7 +165,7 @@ public class ObstacleBuilder extends EntityBuilder {
 
         CollisionData collisionData = getComponent(CollisionData.class);
 
-        collisionData.setAABB(CollideUtils.buildAABB(scaled, rectTransform.getWidthScale(), rectTransform.getHeightScale()));
+        collisionData.setAABB(CollisionAdapter.buildAABB(scaled, rectTransform.getWidthScale(), rectTransform.getHeightScale()));
         collisionData.setCollisionCallback(new ObstacleCallback());
 
         BehaviourData behaviourData = getComponent(BehaviourData.class);
